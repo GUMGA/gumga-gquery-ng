@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl">
+  <head>
+    <meta charset="utf-8">
+    <title>GQuery</title>
+  </head>
+  <body>
+
+
+    <script type="text/javascript" src="dist/gumga-gquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+
+    <script type="text/javascript">
+
+
+
+      angular.module('app', [])
+        .controller('ctrl', function($http){
+
+          let query1 = new GQuery(new Criteria('merda', ComparisonOperator.EQUAL, 'Mateus'))
+
+          let query = new GQuery(new Criteria('nome', ComparisonOperator.EQUAL, 'Mateus'))
+                      .or(new Criteria('nome', ComparisonOperator.EQUAL, 'Munif'))
+                      .and(query1)
+                      .and(new Criteria('nome', ComparisonOperator.EQUAL, 'Munif'))
+
+          console.log(query);            
+
+        })
+
+    </script>
+
+  </body>
+</html>
