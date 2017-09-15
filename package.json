@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "GQuery Gumga",
   "main": "./src/index.ts",
-  "directories": {},
   "authors": [
     "Gumga Tecnologia da Informação S/A"
   ],
