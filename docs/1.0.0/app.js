@@ -1,5 +1,5 @@
 angular.module('app', ['ui.ace'])
-  .controller('Ctrl', function ($http,) {
+  .controller('Ctrl', function ($http) {
     var ctrl = this;
 
     ctrl.consoleValue = "var gquery = \n    new GQuery(new Criteria('nome', ComparisonOperator.EQUAL, 'Mateus'))\n    .or(new Criteria('nome', ComparisonOperator.CONTAINS, 'Felipe'))\n    .and(new Criteria('nome', ComparisonOperator.ENDS_WITH, 'Almeida'))\n\n\n\nreturn gquery;";
