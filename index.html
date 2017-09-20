@@ -17,14 +17,14 @@
       angular.module('app', [])
         .controller('ctrl', function($http){
 
-          let query1 = new GQuery(new Criteria('merda', ComparisonOperator.EQUAL, 'Mateus'))
-
           let query = new GQuery(new Criteria('nome', ComparisonOperator.EQUAL, 'Mateus'))
-                      .or(new Criteria('nome', ComparisonOperator.EQUAL, 'Munif'))
-                      .and(query1)
-                      .and(new Criteria('nome', ComparisonOperator.EQUAL, 'Munif'))
+                        .join(
+                          new Join("endereco", JoinType.INNER)
+                          .and(new Criteria("sobrenome", ComparisonOperator.EQUAL, new CriteriaField("felipe")))
+                        )
+                        .and(new Criteria('nome', ComparisonOperator.EQUAL, 'Munif'))
 
-          console.log(query);            
+          console.log(query);
 
         })
 

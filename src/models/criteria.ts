@@ -15,7 +15,7 @@ export class Criteria {
     this.valueFunction = "%s";
   }
 
-  constructor(field: string = '1', comparisonOperator?: ComparisonOperator, value: any = '1'){
+  constructor(field: any = 1, comparisonOperator?: ComparisonOperator, value: any = 1){
     this.init();
     this.field = field;
     this.comparisonOperator = comparisonOperator && typeof comparisonOperator == "string" ? comparisonOperator : ComparisonOperator[comparisonOperator];

@@ -1,11 +1,13 @@
 import { LogicalOperator } from './logical-operator';
 import { Criteria } from './criteria';
+import { Join } from './join';
 
 export class GQuery {
 
   private logicalOperator: string;
   private criteria: Criteria;
-  private subQuerys: Array<GQuery>;
+  private subQuerys: Array<GQuery> = [];
+  private joins: Array<Join> = [];
 
   constructor(p1?: any, p2?: any, p3?: any){
     if(typeof p1 == "number") this.logicalOperator = LogicalOperator[p1];
@@ -92,6 +94,11 @@ export class GQuery {
       }
       return new GQuery(LogicalOperator.OR, null, new Array<GQuery>(this, other));
     }
+  }
+
+  public join(join: Join):GQuery {
+      this.joins.push(join);
+      return this;
   }
 
 }
