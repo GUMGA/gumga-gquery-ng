@@ -112,7 +112,26 @@ bower install gumga-gquery-ng --save
             </tr>
             <tr>
               <th>value</th>
-              <td>Valor a ser comparado na busca.</dh>
+              <td>Valor a ser comparado na busca. <p class="text-warning"><b>Obs:</b> Quando quiser que o valor seja um outro campo da tabela, utilize o <span style="color: blue;cursor: pointer;" ng-click="ctrl.goTo('criteria-field')">CriteriaField</span>.</p></dh>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <a style="color: blue;cursor: pointer;" id="criteria-field" ng-click="ctrl.goTo('criteria-field')">CriteriaField: </a> new CriteriaField(String field)
+        </div>
+        <div class="panel-body">
+          CriteriaField permite que você compare um valor com um campo da tabela.
+          <br>
+          <br>
+          <h5>Parâmetros</h5>
+          <table class="table">
+            <tr>
+              <th>field</th>
+              <td>Campo no qual será comparado.</dh>
             </tr>
           </table>
         </div>
@@ -123,7 +142,7 @@ bower install gumga-gquery-ng --save
           <a style="color: blue;" ng-click="ctrl.goTo('join')" id="join">Join: </a>new Join(String table, <span style="color: blue;cursor: pointer;" ng-click="ctrl.goTo('join-type')">JoinType</span> type)
         </div>
         <div class="panel-body">
-          Join é o objeto responsável pela criação de joins.
+          Join é o objeto responsável pela união de tabelas.
           <br>
           <br>
           <h5>Parâmetros</h5>
@@ -137,7 +156,7 @@ bower install gumga-gquery-ng --save
               <td>Atributo que define o tipo da ligação, informe um JoinType.</dh>
             </tr>
           </table>
-          <h5>Métodos</h5>
+          <!-- <h5>Métodos</h5>
           <table class="table">
             <tr>
               <th>on(<span style="color: blue;cursor: pointer;" ng-click="ctrl.goTo('criteria')">Criteria</span> criteria)</th>
@@ -151,7 +170,7 @@ bower install gumga-gquery-ng --save
               <th>or(<span style="color: blue;cursor: pointer;" ng-click="ctrl.goTo('criteria')">Criteria</span> criteria) </th>
               <td>Usado para adicionar uma condições "OU".</dh>
             </tr>
-          </table>
+          </table> -->
 
 
           <h4>Exemplo: </h4> Buscando todos os usuários que esteja em uma organização cujo o nome da organização possua GUMGA.
