@@ -1,7 +1,6 @@
 import { ComparisonOperator } from './comparison-operator';
 
 export class Criteria {
-
   private field: string;
   private value: any;
   private values: Array<any>;
@@ -68,6 +67,20 @@ export class Criteria {
 
   public setValueFunction(valueFunction:string):void {
     this.valueFunction = valueFunction;
+  }
+
+  public addIgnoreCase():Criteria {
+    this.valueFunction = this.valueFunction.replace(/%s/g, "lower(%s)");
+    this.fieldFunction = this.fieldFunction.replace(/%s/g, "lower(%s)");
+    return this;
+  }
+
+  public addTranslate():Criteria {
+    let SOURCE_CHARS = "'âàãáÁÂÀÃéêÉÊíÍóôõÓÔÕüúÜÚÇç'";
+    let TARGET_CHARS = "'AAAAAAAAEEEEIIOOOOOOUUUUCC'";
+    this.valueFunction = this.valueFunction.replace(/%s/g, "translate(%s, "+SOURCE_CHARS+","+TARGET_CHARS+")");
+    this.fieldFunction = this.fieldFunction.replace(/%s/g, "translate(%s, "+SOURCE_CHARS+","+TARGET_CHARS+")");
+    return this;
   }
 
 }
