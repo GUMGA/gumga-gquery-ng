@@ -1,6 +1,6 @@
 {
   "name": "gumga-gquery-ng",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "GQuery Gumga",
   "main": "./src/index.ts",
   "authors": [
@@ -32,6 +32,7 @@
     "webpack-stream": "^3.2.0"
   },
   "scripts": {
+    "doc": "node ./docs/create-doc.js",
     "dev": "webpack-dev-server --config ./webpack.dev.config.js",
     "prod": "NODE_ENV=production webpack --config ./webpack.production.config.js && webpack --config ./webpack.production.bundle.config"
   },
