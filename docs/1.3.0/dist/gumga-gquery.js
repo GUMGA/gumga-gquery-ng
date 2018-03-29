@@ -87,9 +87,8 @@ var ComparisonOperator;
     ComparisonOperator[ComparisonOperator["IN_ELEMENTS"] = 10] = "IN_ELEMENTS";
     ComparisonOperator[ComparisonOperator["IS"] = 11] = "IS";
     ComparisonOperator[ComparisonOperator["IN"] = 12] = "IN";
-    ComparisonOperator[ComparisonOperator["NOT_IN"] = 13] = "NOT_IN";
-    ComparisonOperator[ComparisonOperator["BETWEEN"] = 14] = "BETWEEN";
-    ComparisonOperator[ComparisonOperator["LIKE"] = 15] = "LIKE";
+    ComparisonOperator[ComparisonOperator["BETWEEN"] = 13] = "BETWEEN";
+    ComparisonOperator[ComparisonOperator["LIKE"] = 14] = "LIKE";
 })(ComparisonOperator || (ComparisonOperator = {}));
 
 

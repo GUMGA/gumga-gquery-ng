@@ -13,6 +13,7 @@ export enum ComparisonOperator {
     IN_ELEMENTS,
     IS,
     IN,
+    NOT_IN,
     BETWEEN,
     LIKE
 
